@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* Fonts */
+    --ff-main: 'Libre Franklin';
+    --font-size: 1.25rem;
+    --fw-light: 200;
+    --fw-mid: 600;
+    --fw-bold: 700;
+
+    /* Colors */
+    --clr-primary-blue: hsl(223, 87%, 63%);
+    --clr-secondary-paleblue:  hsl(223, 100%, 88%);
+    --clr-secondary-lightred: hsl(354, 100%, 66%);
+    --clr-neutral-grey: hsl(0, 0%, 59%);
+    --clr-neutral-vdarkblue:  hsl(209, 33%, 12%);
+}
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+  html {
+    height: 100%;
+  }
+  main {
+    display: grid;
+    justify-items: center;
+    font-family: var(--ff-main);
+  }
+  .website__logo {
+    margin-top: 5rem;
+    width: 60px;
+    margin-bottom: 2rem;
+  }
+  .website__main-title {
+    font-size: 1.5rem;
+    font-weight: var(--fw-light);
+    color: var(--clr-neutral-vdarkblue);
+    letter-spacing: .5px;
+    margin-bottom: .7rem;
+  }
+  span {
+    font-weight: var(--fw-bold);
+  }
+  .website__sub-title {
+    font-size: .875rem;
+    font-weight: 500;
+    color: var(--clr-neutral-vdarkblue);
+    margin-bottom: 2rem;
+  }
+.website__rectangle-spacing {
+    display: grid;
+    gap: .5rem;
+    width: 300px;
+    font-size: 0.875rem;
+}
+input {
+    width: 300px;
+    padding: .6rem;
+    padding-left: 2rem;
+    border-radius: 2rem;
+    border: 1px solid var(--clr-primary-blue);
+    opacity: 0.8;
+}
+input::placeholder {
+    color: var(--clr-primary-blue);
+    font-weight: 500;
+    opacity: 0.5;
+}
+button {
+    padding: .7rem;
+    border-radius: 2rem;
+    margin-bottom: 3rem;
+    border: transparent;
+    color: white;
+    background-color: var(--clr-primary-blue);
+    font-weight: var(--fw-mid);
+    box-shadow: 0px 2px 4px rgba(0, 0, 255, 0.37);
+}
+button:hover {
+    background-color: rgb(126, 164, 221);
+}
+.website__main-image {
+    width: 90%;
+    margin-bottom: 3rem;
+}
+.website__flex-icons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    place-content: center;
+}
+i {
+    color: var(--clr-primary-blue);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+i:hover {
+    color: rgb(126, 164, 221);
+}
+.website__flex-icons span {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 36px;
+    padding: .5rem;
+    border-radius: 50%;
+    border: 1px solid rgba(89, 89, 255, 0.363);
+}
+footer {
+    font-size: 0.7rem;
+    color: var(--clr-neutral-grey);
+    margin-bottom: 3rem;
+}
+@media (min-width:600px) {
+    .website__rectangle-spacing {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-content: center;
+        gap: .5rem;
+        width: 300px;
+        font-size: 0.875rem;
+    }
+    button {
+        width: 200px;
+        padding: .7rem;
+        border-radius: 2rem;
+        margin-bottom: 3rem;
+        border: transparent;
+        color: white;
+        background-color: var(--clr-primary-blue);
+        font-weight: var(--fw-mid);
+        box-shadow: 0px 2px 4px rgba(0, 0, 255, 0.37);
+    }
+}
