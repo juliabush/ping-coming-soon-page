@@ -99,7 +99,7 @@
 }
 input {
     width: 300px;
-    padding: .6rem;
+    padding: .7rem;
     padding-left: 2rem;
     border-radius: 2rem;
     border: 1px solid var(--clr-primary-blue);
@@ -110,6 +110,12 @@ input::placeholder {
     font-weight: 500;
     opacity: 0.5;
 }
+form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 button {
     padding: .7rem;
     border-radius: 2rem;
@@ -119,6 +125,7 @@ button {
     background-color: var(--clr-primary-blue);
     font-weight: var(--fw-mid);
     box-shadow: 0px 2px 4px rgba(0, 0, 255, 0.37);
+    cursor: pointer;
 }
 button:hover {
     background-color: rgb(126, 164, 221);
@@ -155,6 +162,18 @@ footer {
     color: var(--clr-neutral-grey);
     margin-bottom: 3rem;
 }
+.error_text {
+  position: absolute;
+  font-style: italic;
+  left: 16px;
+  top: 50px;
+  font-size: .95rem;
+  color: var(--clr-secondary-lightred);
+}
+form.error input[type="email"] {
+  border: 2px solid var(--clr-secondary-lightred);
+  margin-bottom: 20px;
+}
 @media (min-width:600px) {
     .website__rectangle-spacing {
         display: grid;
@@ -174,5 +193,10 @@ footer {
         background-color: var(--clr-primary-blue);
         font-weight: var(--fw-mid);
         box-shadow: 0px 2px 4px rgba(0, 0, 255, 0.37);
+    }
+    form {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
     }
 }
